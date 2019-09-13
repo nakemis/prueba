@@ -1,0 +1,13 @@
+<h2>{{titulo}}</h2>
+<p>compra la zapatillas de las mejores marcas</p>
+<ul>
+    <li *ngFor="let listademarca of marcas">{{listademarca}}</li>
+</ul>
+<ul>
+    <li *ngFor="let tennis of zapatillas">
+        {{tennis.nombre}} - <strong> $ {{tennis.precio}}</strong>
+        <span *ngIf="tennis.precio <= 80 "
+        [style.color]="tennis.precio <= 80 ? 'green': 'transparent'"
+        > !!EN OFERTA¡¡ </span>
+    </li>
+</ul>
